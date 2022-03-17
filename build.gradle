@@ -19,11 +19,21 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis'
+	implementation group: 'org.springframework.data', name: 'spring-data-redis'
+	implementation group: 'io.projectreactor', name: 'reactor-core', version: '3.4.15'
+	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.4.5'
+	implementation group: 'org.springdoc', name: 'springdoc-openapi-webflux-ui', version: '1.6.3'
+	implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.9.8'
+
+	testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+	compileOnly group: 'org.projectlombok', name: 'lombok'
+	annotationProcessor group: 'org.projectlombok', name: 'lombok'
+
+
 }
 
 tasks.named('test') {
