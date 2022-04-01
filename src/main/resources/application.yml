@@ -10,3 +10,17 @@ spring:
 
 server:
   port: 8081
+
+daily-limit:
+  url: http://localhost:8080/api/v1
+
+resilience4j.circuitbreaker:
+  instances:
+    CIRCUIT_BRAKER_DAILY_LIMIT:
+      slidingWindowType: TIME_BASED
+      slidingWindowSize: 10
+      minimumNumberOfCalls: 5
+      failureRateThreshold: 70
+      slowCallDurationThreshold: 2s
+      waitDurationInOpenState: 40s
+      writableStackTraceEnabled: false
