@@ -1,6 +1,6 @@
-package com.corcino.transactionbff.json;
+package com.corcino.transactionbff.transaction.json;
 
-import com.corcino.transactionbff.model.Beneficiary;
+import com.corcino.transactionbff.transaction.model.Beneficiary;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 

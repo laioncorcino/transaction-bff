@@ -1,4 +1,4 @@
-package com.corcino.transactionbff.model;
+package com.corcino.transactionbff.transaction.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

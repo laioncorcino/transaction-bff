@@ -1,8 +1,8 @@
-package com.corcino.transactionbff.json;
+package com.corcino.transactionbff.transaction.json;
 
-import com.corcino.transactionbff.model.Transaction;
-import com.corcino.transactionbff.model.TransactionStatus;
-import com.corcino.transactionbff.model.TransactionType;
+import com.corcino.transactionbff.transaction.model.Transaction;
+import com.corcino.transactionbff.transaction.model.TransactionStatus;
+import com.corcino.transactionbff.transaction.model.TransactionType;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;

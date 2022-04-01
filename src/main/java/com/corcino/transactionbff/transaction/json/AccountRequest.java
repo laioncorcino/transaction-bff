@@ -1,4 +1,4 @@
-package com.corcino.transactionbff.json;
+package com.corcino.transactionbff.transaction.json;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;

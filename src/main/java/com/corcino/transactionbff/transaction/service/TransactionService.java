@@ -1,10 +1,11 @@
-package com.corcino.transactionbff.service;
+package com.corcino.transactionbff.transaction.service;
 
-import com.corcino.transactionbff.factory.TransactionFactory;
-import com.corcino.transactionbff.json.TransactionRequest;
-import com.corcino.transactionbff.json.TransactionResponse;
-import com.corcino.transactionbff.model.Transaction;
-import com.corcino.transactionbff.redis.RedisTransactionRepository;
+import com.corcino.transactionbff.error.exception.NotFoundException;
+import com.corcino.transactionbff.transaction.factory.TransactionFactory;
+import com.corcino.transactionbff.transaction.json.TransactionRequest;
+import com.corcino.transactionbff.transaction.json.TransactionResponse;
+import com.corcino.transactionbff.transaction.model.Transaction;
+import com.corcino.transactionbff.transaction.redis.RedisTransactionRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -46,7 +47,7 @@ public class TransactionService {
 
         return transaction.orElseThrow(() -> {
             log.error("Transação de id {} nao encontrado", transactionId);
-            return new RuntimeException("Book not found");
+            return new NotFoundException("Transaction not found");
         });
     }
 

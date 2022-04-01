@@ -1,4 +1,4 @@
-package com.corcino.transactionbff.model;
+package com.corcino.transactionbff.transaction.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 

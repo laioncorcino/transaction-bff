@@ -1,12 +1,12 @@
-package com.corcino.transactionbff.factory;
+package com.corcino.transactionbff.transaction.factory;
 
-import com.corcino.transactionbff.json.AccountRequest;
-import com.corcino.transactionbff.json.BeneficiaryRequest;
-import com.corcino.transactionbff.json.TransactionRequest;
-import com.corcino.transactionbff.model.Account;
-import com.corcino.transactionbff.model.Beneficiary;
-import com.corcino.transactionbff.model.Transaction;
-import com.corcino.transactionbff.model.TransactionStatus;
+import com.corcino.transactionbff.transaction.json.AccountRequest;
+import com.corcino.transactionbff.transaction.json.BeneficiaryRequest;
+import com.corcino.transactionbff.transaction.json.TransactionRequest;
+import com.corcino.transactionbff.transaction.model.Account;
+import com.corcino.transactionbff.transaction.model.Beneficiary;
+import com.corcino.transactionbff.transaction.model.Transaction;
+import com.corcino.transactionbff.transaction.model.TransactionStatus;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -16,6 +16,7 @@ public class TransactionFactory {
 
     public Transaction buildModelTransaction(TransactionRequest transactionRequest) {
         Transaction transaction = new Transaction();
+
         transaction.setAmount(transactionRequest.getAmount());
         transaction.setAccount(buildModelAccount(transactionRequest.getAccount()));
         transaction.setBeneficiary(buildModelBeneficiary(transactionRequest.getBeneficiary()));
